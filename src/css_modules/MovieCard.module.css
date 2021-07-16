@@ -1,0 +1,64 @@
+.movie_card {
+  position: relative;
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.movie_card::before {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: gold;
+  transform: rotate(45deg);
+  right: -32.5px;
+  top: -32.5px;
+  z-index: 1;
+}
+
+.movie_image {
+  border-radius: 5px;
+  background-color: azure;
+  width: 230px;
+  height: 345px;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin: 0 auto;
+}
+
+.rating_section {
+  content: '';
+  display: flex;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  background: gold;
+  transform: rotate(45deg);
+  right: -32.5px;
+  top: -32.5px;
+  z-index: 1;
+}
+
+.rating {
+  color: black;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 700;
+  align-self: center;
+  top: 2px;
+  right: 2px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 580px) {
+  .movie_image {
+    width: 100%;
+    height: auto;
+  }
+}
