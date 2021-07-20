@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+}
+
+/* movie-card hover effect */
+.MoviesGrid_movies_list__1Dniz:hover 
+.MovieCard_movie_card__2i1Tu:not(:hover) {
+  filter: grayscale(75%);
+}
+
+.MoviesGrid_movies_list__1Dniz:hover 
+.MovieCard_movie_card__2i1Tu:not(:hover)::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
