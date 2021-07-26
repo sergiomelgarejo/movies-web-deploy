@@ -2,15 +2,32 @@ import { MovieCard } from './MovieCard'
 import styles from './css_modules/MoviesGrid.module.css'
 import { useState, useEffect } from 'react';
 import { get } from '../utils/httpClient';
+import { Spinner } from './Spinner';
+import { useQuery } from '../hooks/useQuery'
 
 export function MoviesGrid() {
   const [movies, setMovies] = useState([])
-  
-  useEffect(() => [
-    get("/discover/movie").then((data) => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  const query = useQuery()
+  const search = query.get("search")
+
+  useEffect(() => {
+    setIsLoading(true)
+
+    const searchURL = search 
+      ? `/search/movie?query=${search}`
+      : "/discover/movie";
+
+    get(searchURL).then((data) => {
       setMovies(data.results)
+      setIsLoading(false)
     })
-  ], []);
+  }, [search]);
+
+  if (isLoading) {
+    return ( <Spinner /> )
+  }
 
   return (
     <ul className={styles.movies_list}>
@@ -20,20 +37,3 @@ export function MoviesGrid() {
     </ul>
   )
 }
-
-// api key: 57537ff19f381dd7b67eee1ea8b8164a
-// api token: eyJh
-/* 
-const API = "https://api.themoviedb.org/3";
-
-export function get(path) {
-  return fetch(API + path, {
-    headers: {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1NzUzN2ZmMTlmMzgxZGQ3YjY3ZWVlMWVhOGI4MTY0YSIsInN1YiI6IjVlM2ExNmU1MGMyNzEwMDAxODc1NTI4MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nOpZ_nBtA93tbzr6-rxD0760tssAAaSppyjRv9anArs",
-      "Content-Type": "application/json;charset=utf-8",
-    },
-  }).then((result) => result.json());
-}
-
-*/ 

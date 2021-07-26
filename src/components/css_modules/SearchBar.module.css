@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.search_box {
+  position: relative;
+}
+
+.search_button {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.search_input {
+  height: 35px;
+  border-radius: 5px;
+  padding: 5px 30px 5px 10px;
+}
+
+.search_input,
+.search_input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: .3px;
+}
+
+.search_input:focus {
+  outline: none;
+  border-color: rgb(39, 39, 255);
+}

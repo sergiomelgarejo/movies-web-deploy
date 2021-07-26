@@ -1,9 +1,13 @@
 import { MoviesGrid } from '../components/MoviesGrid';
+import { SearchBar } from '../components/SearchBar';
 
 export function LandingPage() {
   return (
     <div className="container">
-        <MoviesGrid/>
+        <div>
+          <SearchBar />
+          <MoviesGrid />
+        </div>
     </div>      
   )
 }

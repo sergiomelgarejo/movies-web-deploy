@@ -9,7 +9,7 @@ export function MovieCard({movie}) {
         <img src={imageURL} className={styles.movie_image} alt={movie.title} />
       </Link>
       <Link to={`/movies/${movie.id}`}>
-        <div className={styles.title}>{movie.title}</div>
+        <div className={styles.title}>{movie.title} ({movie.release_date.slice(0, 4)})</div>
       </Link>
       <div className="rating_section">
         <div className={styles.rating} alt="rating">{movie.vote_average}</div>
