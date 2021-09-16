@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/sergiomelgarejo/movies-web-deploy/static/css/main.c24f68aa.chunk.css",
+    "main.js": "/sergiomelgarejo/movies-web-deploy/static/js/main.6343d35b.chunk.js",
+    "main.js.map": "/sergiomelgarejo/movies-web-deploy/static/js/main.6343d35b.chunk.js.map",
+    "runtime-main.js": "/sergiomelgarejo/movies-web-deploy/static/js/runtime-main.89b63f6d.js",
+    "runtime-main.js.map": "/sergiomelgarejo/movies-web-deploy/static/js/runtime-main.89b63f6d.js.map",
+    "static/js/2.161fee7c.chunk.js": "/sergiomelgarejo/movies-web-deploy/static/js/2.161fee7c.chunk.js",
+    "static/js/2.161fee7c.chunk.js.map": "/sergiomelgarejo/movies-web-deploy/static/js/2.161fee7c.chunk.js.map",
+    "index.html": "/sergiomelgarejo/movies-web-deploy/index.html",
+    "static/css/main.c24f68aa.chunk.css.map": "/sergiomelgarejo/movies-web-deploy/static/css/main.c24f68aa.chunk.css.map",
+    "static/js/2.161fee7c.chunk.js.LICENSE.txt": "/sergiomelgarejo/movies-web-deploy/static/js/2.161fee7c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.89b63f6d.js",
+    "static/js/2.161fee7c.chunk.js",
+    "static/css/main.c24f68aa.chunk.css",
+    "static/js/main.6343d35b.chunk.js"
+  ]
+}
